@@ -1,0 +1,124 @@
+{
+  "theme": "Light/Dark toggle supported, default to sleek light mode",
+  "archetype": "SWISS & HIGH-CONTRAST",
+  "typography": {
+    "headings": {
+      "font": "Outfit, sans-serif",
+      "classes": "tracking-tighter leading-none font-bold"
+    },
+    "body": {
+      "font": "Manrope, sans-serif",
+      "classes": "leading-relaxed text-base"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl",
+      "h3": "text-xl sm:text-2xl",
+      "labels": "text-xs tracking-[0.2em] uppercase font-semibold"
+    },
+    "rules": "Never use Inter for headings. Keep jump between heading and subheading within 2 Tailwind steps."
+  },
+  "colors": {
+    "light": {
+      "background": "#FAFAFA",
+      "foreground": "#0A0A0A",
+      "primary": "#0A0A0A",
+      "primary_foreground": "#FFFFFF",
+      "accent": "#FF3B30",
+      "border": "#E5E7EB"
+    },
+    "dark": {
+      "background": "#0A0A0A",
+      "foreground": "#FAFAFA",
+      "primary": "#FFFFFF",
+      "primary_foreground": "#0A0A0A",
+      "accent": "#FF453A",
+      "border": "#27272A"
+    },
+    "specifics": {
+      "low_stock": "bg-red-500/10 text-red-600 border-red-500/20",
+      "promotion": "bg-indigo-600 text-white shadow-lg"
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": "Glassmorphism for nav/headers (bg-white/70 backdrop-blur-xl). Flat solid surfaces for product cards with 1px border. No Neumorphism.",
+    "borders": "Expose the skeleton on the admin panel with border-collapse styles."
+  },
+  "components": {
+    "product_card": "Image on top (aspect-square object-cover), details below. Left-align text. Promotion badge absolute top-left.",
+    "admin_dashboard": "High Density Grid (Bento). Tight gaps. Focus on data correlation.",
+    "cart": "Side drawer (Shadcn Sheet).",
+    "buttons": "Pill-shaped (rounded-full). Solid colors. Hover: scale slightly or translate-y-px."
+  },
+  "grids_and_layouts": {
+    "catalog": "Asymmetrical Tetris grid or generous standard grid (gap-8 to gap-12).",
+    "admin": "Dense bento grid (gap-4). Every pixel utilized.",
+    "spacing": "Use generous spacing (p-8, p-12) for marketing/storefront sections."
+  },
+  "motion_and_interactions": {
+    "framer_motion": "Mandatory for page transitions, smooth stagger effects on product lists.",
+    "hover": "Hover states must explicitly set text color. Images scale up 5% on hover.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "accessibility": {
+    "contrast": "Maintain 4.5:1 ratio.",
+    "testing": "All interactive elements MUST include data-testid attribute."
+  },
+  "media": {
+    "images": "Do not exceed 80vh on mobile. Max overlay opacity bg-black/50 for hero banners."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1590995505834-e5380bba1865?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwd2F0Y2h8ZW58MHx8fHwxNzg2ODA5NjYyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "product",
+      "description": "Minimalist Watch"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxzbGVlayUyMHdpcmVsZXNzJTIwaGVhZHBob25lc3xlbnwwfHx8fDE3ODY4MDk2NjJ8MA&ixlib=rb-4.1.0&q=85",
+      "category": "product",
+      "description": "Pro Headphones"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1689287428096-7e1dcc705a5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwd2F0Y2h8ZW58MHx8fHwxNzg2ODA5NjYyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "product",
+      "description": "Silver Analog Watch"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1641048930621-ab5d225ae5b0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxzbGVlayUyMHdpcmVsZXNzJTIwaGVhZHBob25lc3xlbnwwfHx8fDE3ODY4MDk2NjJ8MA&ixlib=rb-4.1.0&q=85",
+      "category": "product",
+      "description": "Over-Ear Headphones"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1580837428500-74aa7eefc672?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwd2F0Y2h8ZW58MHx8fHwxNzg2ODA5NjYyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "hero",
+      "description": "Hero section banner"
+    }
+  ],
+  "3d_and_creative_libraries": [
+    "framer-motion (for smooth page/item transitions as requested)"
+  ],
+  "instructions_to_main_agent": [
+    "Implement two distinct areas: Customer Storefront and Admin Dashboard.",
+    "Customer Storefront: Display product catalog. Show 'quantity in stock' and distinct badges for 'promotions'. Allow customers to add to cart, mock checkout, and view order history.",
+    "Admin Dashboard: Allow admin to edit products, prices, stock quantities, and promotions. View past orders.",
+    "CRITICAL REQUIREMENT: When stock of ANY product equals 1, trigger a visually prominent alert on the Admin Dashboard (e.g., pulsating red badge or banner) AND fire a 'sonner' toast notification alerting the admin.",
+    "Ensure 'bem moderno com transição' (modern with transitions): Heavy use of framer-motion for smooth route changes, modal openings, and list staggering.",
+    "Implement simple JWT-based auth for User vs Admin separation."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic outputs. Make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g. transition: all).",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters. Use proper icon libraries (lucide-react).",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Use sonner for toast notifications.",
+    "DO NOT use completely transparent backgrounds for overlays, headers, or dropdowns. Always use glassmorphism or solid colors.",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute to facilitate robust automated testing."
+  ]
+}

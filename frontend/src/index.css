@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@layer base {
+    :root {
+        --background: 41 37% 89%;
+        --foreground: 27 25% 23%;
+        --card: 40 50% 97%;
+        --card-foreground: 27 25% 23%;
+        --popover: 40 50% 97%;
+        --popover-foreground: 27 25% 23%;
+        --primary: 28 25% 28%;
+        --primary-foreground: 40 50% 96%;
+        --secondary: 41 33% 85%;
+        --secondary-foreground: 28 25% 28%;
+        --muted: 40 33% 86%;
+        --muted-foreground: 31 17% 46%;
+        --accent: 343 33% 62%;
+        --accent-foreground: 40 50% 97%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 38 30% 79%;
+        --input: 38 30% 79%;
+        --ring: 28 25% 28%;
+        --radius: 0.75rem;
+    }
+    .dark {
+        --background: 27 20% 12%;
+        --foreground: 40 40% 92%;
+        --card: 27 20% 15%;
+        --card-foreground: 40 40% 92%;
+        --popover: 27 20% 15%;
+        --popover-foreground: 40 40% 92%;
+        --primary: 40 45% 90%;
+        --primary-foreground: 27 25% 18%;
+        --secondary: 27 15% 22%;
+        --secondary-foreground: 40 40% 92%;
+        --muted: 27 15% 22%;
+        --muted-foreground: 35 15% 65%;
+        --accent: 343 33% 62%;
+        --accent-foreground: 40 50% 97%;
+        --destructive: 0 62% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 27 15% 25%;
+        --input: 27 15% 25%;
+        --ring: 40 45% 90%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    h1, h2, h3, h4, .font-display {
+        font-family: 'Cormorant Garamond', serif;
+    }
+}
+
+::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+}
+
+@keyframes pulse-alert {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(190, 90, 90, 0.45); }
+    50% { opacity: 0.9; box-shadow: 0 0 0 7px rgba(190, 90, 90, 0); }
+}
+.animate-pulse-alert {
+    animation: pulse-alert 1.7s ease-in-out infinite;
+}
